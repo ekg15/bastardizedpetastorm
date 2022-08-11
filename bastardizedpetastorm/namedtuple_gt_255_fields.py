@@ -170,7 +170,7 @@ def namedtuple_gt_255_fields(typename, field_names, verbose=False, rename=False,
     exec(class_definition, namespace)
     result = namespace[typename]
     result._source = class_definition
-    if True:
+    if verbose:
         print(result._source)
 
     # For pickling to work, the __module__ variable needs to be set to the frame
