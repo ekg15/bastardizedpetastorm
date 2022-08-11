@@ -19,25 +19,25 @@ import warnings
 import six
 from pyarrow import parquet as pq
 
-from petastorm.arrow_reader_worker import ArrowReaderWorker
-from petastorm.cache import NullCache
-from petastorm.errors import NoDataAvailableError
-from petastorm.etl import dataset_metadata, rowgroup_indexing
-from petastorm.etl.dataset_metadata import PetastormMetadataError, infer_or_load_unischema
-from petastorm.fs_utils import get_filesystem_and_path_or_paths, normalize_dir_url
-from petastorm.local_disk_arrow_table_cache import LocalDiskArrowTableCache
-from petastorm.local_disk_cache import LocalDiskCache
-from petastorm.ngram import NGram
-from petastorm.predicates import PredicateBase
-from petastorm.py_dict_reader_worker import PyDictReaderWorker
-from petastorm.reader_impl.arrow_table_serializer import ArrowTableSerializer
-from petastorm.reader_impl.pickle_serializer import PickleSerializer
-from petastorm.selectors import RowGroupSelectorBase
-from petastorm.transform import transform_schema
-from petastorm.workers_pool.dummy_pool import DummyPool
-from petastorm.workers_pool.process_pool import ProcessPool
-from petastorm.workers_pool.thread_pool import ThreadPool
-from petastorm.workers_pool.ventilator import ConcurrentVentilator
+from bastardizedpetastorm.arrow_reader_worker import ArrowReaderWorker
+from bastardizedpetastorm.cache import NullCache
+from bastardizedpetastorm.errors import NoDataAvailableError
+from bastardizedpetastorm.etl import dataset_metadata, rowgroup_indexing
+from bastardizedpetastorm.etl.dataset_metadata import PetastormMetadataError, infer_or_load_unischema
+from bastardizedpetastorm.fs_utils import get_filesystem_and_path_or_paths, normalize_dir_url
+from bastardizedpetastorm.local_disk_arrow_table_cache import LocalDiskArrowTableCache
+from bastardizedpetastorm.local_disk_cache import LocalDiskCache
+from bastardizedpetastorm.ngram import NGram
+from bastardizedpetastorm.predicates import PredicateBase
+from bastardizedpetastorm.py_dict_reader_worker import PyDictReaderWorker
+from bastardizedpetastorm.reader_impl.arrow_table_serializer import ArrowTableSerializer
+from bastardizedpetastorm.reader_impl.pickle_serializer import PickleSerializer
+from bastardizedpetastorm.selectors import RowGroupSelectorBase
+from bastardizedpetastorm.transform import transform_schema
+from bastardizedpetastorm.workers_pool.dummy_pool import DummyPool
+from bastardizedpetastorm.workers_pool.process_pool import ProcessPool
+from bastardizedpetastorm.workers_pool.thread_pool import ThreadPool
+from bastardizedpetastorm.workers_pool.ventilator import ConcurrentVentilator
 
 logger = logging.getLogger(__name__)
 
