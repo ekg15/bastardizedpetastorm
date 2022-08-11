@@ -21,10 +21,10 @@ import numpy as np
 from pyarrow import parquet as pq
 from pyarrow.parquet import ParquetFile
 
-from petastorm import utils
-from petastorm.cache import NullCache
-from petastorm.workers_pool import EmptyResultError
-from petastorm.workers_pool.worker_base import WorkerBase
+from bastardizedpetastorm import utils
+from bastardizedpetastorm.cache import NullCache
+from bastardizedpetastorm.workers_pool import EmptyResultError
+from bastardizedpetastorm.workers_pool.worker_base import WorkerBase
 
 
 def _merge_two_dicts(a, b):
