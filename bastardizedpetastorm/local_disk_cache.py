@@ -16,7 +16,7 @@ from __future__ import division
 import shutil
 from diskcache import FanoutCache
 
-from petastorm.cache import CacheBase
+from bastardizedpetastorm.cache import CacheBase
 
 
 class LocalDiskCache(CacheBase):
