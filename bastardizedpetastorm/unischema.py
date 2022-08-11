@@ -198,7 +198,6 @@ class Unischema(object):
             fields = sorted(fields, key=lambda t: t.name)
 
         self._fields = OrderedDict([(f.name, f) for f in fields])
-        print(self._fields.values())
         # Generates attributes named by the field names as an access syntax sugar.
         for f in fields:
             if not hasattr(self, f.name):
