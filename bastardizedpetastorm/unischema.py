@@ -114,6 +114,8 @@ class _NamedtupleCache(object):
                 '{}_view'.format(parent_schema_name), field_names)
         print(_NamedtupleCache._store)
         print("here?" * 20)
+        print(_NamedtupleCache._store[key])
+        print("here???" * 20)
         return _NamedtupleCache._store[key]
 
 
