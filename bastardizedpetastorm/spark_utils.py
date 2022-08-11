@@ -15,9 +15,9 @@
 """A set of Spark specific helper functions for the petastorm dataset"""
 from six.moves.urllib.parse import urlparse
 
-from petastorm import utils
-from petastorm.etl.dataset_metadata import get_schema_from_dataset_url
-from petastorm.fs_utils import FilesystemResolver
+from bastardizedpetastorm import utils
+from bastardizedpetastorm.etl.dataset_metadata import get_schema_from_dataset_url
+from bastardizedpetastorm.fs_utils import FilesystemResolver
 
 
 def dataset_as_rdd(dataset_url, spark_session, schema_fields=None, hdfs_driver='libhdfs3'):
