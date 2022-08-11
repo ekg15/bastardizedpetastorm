@@ -22,9 +22,9 @@ import pyarrow as pa
 from pyarrow import parquet as pq
 from pyarrow.parquet import ParquetFile
 
-from petastorm.cache import NullCache
-from petastorm.workers_pool import EmptyResultError
-from petastorm.workers_pool.worker_base import WorkerBase
+from bastardizedpetastorm.cache import NullCache
+from bastardizedpetastorm.workers_pool import EmptyResultError
+from bastardizedpetastorm.workers_pool.worker_base import WorkerBase
 
 
 class ArrowReaderWorkerResultsQueueReader(object):
