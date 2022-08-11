@@ -304,7 +304,9 @@ class Unischema(object):
                 typed_dict[key] = kargs[key]
             else:
                 typed_dict[key] = None
+        print("typed_dict")
         print(typed_dict)
+        # need to change **typed_dict
         return self._get_namedtuple()(**typed_dict)
 
     def make_namedtuple_tf(self, *args, **kargs):
