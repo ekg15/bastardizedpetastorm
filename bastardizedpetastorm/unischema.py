@@ -113,7 +113,7 @@ class _NamedtupleCache(object):
             _NamedtupleCache._store[key] = _new_gt_255_compatible_namedtuple(
                 '{}_view'.format(parent_schema_name), field_names)
         print("here?" * 20)
-        print(_NamedtupleCache._store.__dict__)
+        print(_NamedtupleCache._store)
         print("here???" * 20)
         print(_NamedtupleCache._store[key])
         print(key)
