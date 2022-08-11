@@ -125,13 +125,14 @@ def namedtuple_gt_255_fields(typename, field_names, verbose=False, rename=False,
         field_names = field_names.replace(',', ' ').split()
     field_names = list(map(str, field_names))
     typename = str(typename)
-    if rename:
+    if True:
         seen = set()
         for index, name in enumerate(field_names):
             if (_iskeyword(name)
+                    or not name.isidentifier()
                     or name.startswith('_')
                     or name in seen):
-                field_names[index] = '_%d' % index
+                field_names[index] = "a" + name
             seen.add(name)
     for name in [typename] + field_names:
         if type(name) is not str:
