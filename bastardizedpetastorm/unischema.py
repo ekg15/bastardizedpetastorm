@@ -112,10 +112,11 @@ class _NamedtupleCache(object):
         if key not in _NamedtupleCache._store:
             _NamedtupleCache._store[key] = _new_gt_255_compatible_namedtuple(
                 '{}_view'.format(parent_schema_name), field_names)
-        print(_NamedtupleCache._store)
         print("here?" * 20)
-        print(_NamedtupleCache._store[key])
+        print(_NamedtupleCache._store.__dict__)
         print("here???" * 20)
+        print(_NamedtupleCache._store[key])
+        print(key)
         return _NamedtupleCache._store[key]
 
 
