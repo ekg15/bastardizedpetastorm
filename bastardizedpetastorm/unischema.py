@@ -120,7 +120,7 @@ def _new_gt_255_compatible_namedtuple(*args, **kwargs):
         from bastardizedpetastorm.namedtuple_gt_255_fields import namedtuple_gt_255_fields
         namedtuple_cls = namedtuple_gt_255_fields
     else:  # Python 2 or Python 3.7 and later.
-        namedtuple_cls = namedtuple
+        namedtuple_cls = namedtuple_gt_255_fields
 
     return namedtuple_cls(*args, **kwargs)
 
