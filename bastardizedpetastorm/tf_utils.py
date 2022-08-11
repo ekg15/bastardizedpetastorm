@@ -352,8 +352,8 @@ def make_petastorm_dataset(reader):
     :class:`~petastorm.unischema.Unischema`.
 
     >>> import tensorflow.compat.v1 as tf  # pylint: disable=import-error
-    >>> from petastorm.reader import Reader
-    >>> from petastorm.tf_utils import make_petastorm_dataset
+    >>> from bastardizedpetastorm.reader import Reader
+    >>> from bastardizedpetastorm.tf_utils import make_petastorm_dataset
     >>>
     >>> with Reader('file:///some/path') as reader:
     >>>     dataset = make_petastorm_dataset(reader)
