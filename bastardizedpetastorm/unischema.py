@@ -117,7 +117,7 @@ def _new_gt_255_compatible_namedtuple(*args, **kwargs):
     if six.PY3 and sys.version_info[1] < 7:
         # Have to hide the codeblock in namedtuple_gt_255_fields.py from Python 2 interpreter
         # as it would trigger "unqualified exec is not allowed in function" SyntaxError
-        from petastorm.namedtuple_gt_255_fields import namedtuple_gt_255_fields
+        from bastardizedpetastorm.namedtuple_gt_255_fields import namedtuple_gt_255_fields
         namedtuple_cls = namedtuple_gt_255_fields
     else:  # Python 2 or Python 3.7 and later.
         namedtuple_cls = namedtuple
