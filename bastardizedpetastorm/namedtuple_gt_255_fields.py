@@ -21,7 +21,7 @@ _class_template = """\
 from builtins import property as _property, tuple as _tuple
 from operator import itemgetter as _itemgetter
 from collections import OrderedDict
-from petastorm.namedtuple_gt_255_fields import _restore_namedtuple_gt_255_fields
+from bastardizedpetastorm.namedtuple_gt_255_fields import _restore_namedtuple_gt_255_fields
 class {typename}(tuple):
     '{typename}({arg_list})'
     __slots__ = ()
