@@ -187,6 +187,7 @@ class Unischema(object):
     """
 
     def __init__(self, name, fields):
+        print(fields)
         """Creates an instance of a Unischema object.
 
         :param name: name of the schema
