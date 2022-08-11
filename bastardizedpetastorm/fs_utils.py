@@ -20,7 +20,7 @@ from six.moves.urllib.parse import urlparse, urlunparse
 from fsspec.core import strip_protocol
 from fsspec.utils import update_storage_options
 
-from petastorm.hdfs.namenode import HdfsNamenodeResolver, HdfsConnector
+from bastardizedpetastorm.hdfs.namenode import HdfsNamenodeResolver, HdfsConnector
 
 logger = logging.getLogger(__name__)
 
