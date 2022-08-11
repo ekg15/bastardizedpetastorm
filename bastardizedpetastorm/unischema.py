@@ -107,6 +107,8 @@ class _NamedtupleCache(object):
         key = ' '.join([parent_schema_name] + field_names)
         print("here!!!!" * 20)
         print(_NamedtupleCache._store)
+        print("field names TUPLECACHE GET" * 8)
+        print(field_names)
         if key not in _NamedtupleCache._store:
             _NamedtupleCache._store[key] = _new_gt_255_compatible_namedtuple(
                 '{}_view'.format(parent_schema_name), field_names)
