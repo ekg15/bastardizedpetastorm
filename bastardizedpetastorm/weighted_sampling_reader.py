@@ -36,8 +36,8 @@ class WeightedSamplingReader(object):
         The following example shows how a :class:`~petastorm.weighted_sampling_reader.WeightedSamplingReader` can be
         instantiated with two readers which are sampled with 10% and 90% probabilities respectively.
 
-        >>> from petastorm.weighted_sampling_reader import WeightedSamplingReader
-        >>> from petastorm.reader import Reader
+        >>> from bastardizedpetastorm.weighted_sampling_reader import WeightedSamplingReader
+        >>> from bastardizedpetastorm.reader import Reader
         >>>
         >>> with WeightedSamplingReader([Reader('file:///dataset1'), Reader('file:///dataset1')], [0.1, 0.9]) as reader:
         >>>     new_sample = next(reader)
