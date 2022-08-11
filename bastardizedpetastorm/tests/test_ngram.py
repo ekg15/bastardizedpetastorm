@@ -14,8 +14,8 @@
 
 import numpy as np
 
-from petastorm.ngram import NGram
-from petastorm.unischema import UnischemaField, Unischema
+from bastardizedpetastorm.ngram import NGram
+from bastardizedpetastorm.unischema import UnischemaField, Unischema
 
 TestSchema = Unischema('TestSchema', [
     UnischemaField('string', np.unicode_, (), None, False),

@@ -23,8 +23,8 @@ import pytest
 from pyspark import Row
 from pyspark.sql.types import StringType, IntegerType, DecimalType, ShortType, LongType
 
-from petastorm.codecs import ScalarCodec, NdarrayCodec
-from petastorm.unischema import Unischema, UnischemaField, dict_to_spark_row, \
+from bastardizedpetastorm.codecs import ScalarCodec, NdarrayCodec
+from bastardizedpetastorm.unischema import Unischema, UnischemaField, dict_to_spark_row, \
     insert_explicit_nulls, match_unischema_fields, _new_gt_255_compatible_namedtuple, _fullmatch
 
 from unittest import mock

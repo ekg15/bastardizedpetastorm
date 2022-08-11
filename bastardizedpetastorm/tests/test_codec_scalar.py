@@ -18,8 +18,8 @@ import pytest
 from pyspark.sql.types import StringType, ByteType, ShortType, IntegerType, LongType, DecimalType, BooleanType, \
     FloatType
 
-from petastorm.codecs import ScalarCodec
-from petastorm.unischema import UnischemaField
+from bastardizedpetastorm.codecs import ScalarCodec
+from bastardizedpetastorm.unischema import UnischemaField
 
 
 def test_byte_string():

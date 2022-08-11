@@ -17,7 +17,7 @@ import pandas as pd
 import pyarrow as pa
 from pandas.util.testing import assert_frame_equal
 
-from petastorm.reader_impl.arrow_table_serializer import ArrowTableSerializer
+from bastardizedpetastorm.reader_impl.arrow_table_serializer import ArrowTableSerializer
 
 
 def test_random_table():

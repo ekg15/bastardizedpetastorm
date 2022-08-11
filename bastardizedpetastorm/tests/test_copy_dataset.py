@@ -21,8 +21,8 @@ import pytest
 from pyspark.sql import SparkSession
 from pyspark.sql.utils import AnalysisException
 
-from petastorm.reader import make_reader
-from petastorm.tools.copy_dataset import _main, copy_dataset
+from bastardizedpetastorm.reader import make_reader
+from bastardizedpetastorm.tools.copy_dataset import _main, copy_dataset
 
 
 @pytest.fixture()

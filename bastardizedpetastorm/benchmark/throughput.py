@@ -24,14 +24,14 @@ import psutil
 import six
 import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
-from petastorm import make_reader
-from petastorm.etl.dataset_metadata import get_schema_from_dataset_url
-from petastorm.reader_impl.pickle_serializer import PickleSerializer
-from petastorm.tf_utils import tf_tensors
-from petastorm.unischema import match_unischema_fields
-from petastorm.workers_pool.dummy_pool import DummyPool
-from petastorm.workers_pool.process_pool import ProcessPool
-from petastorm.workers_pool.thread_pool import ThreadPool
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.etl.dataset_metadata import get_schema_from_dataset_url
+from bastardizedpetastorm.reader_impl.pickle_serializer import PickleSerializer
+from bastardizedpetastorm.tf_utils import tf_tensors
+from bastardizedpetastorm.unischema import match_unischema_fields
+from bastardizedpetastorm.workers_pool.dummy_pool import DummyPool
+from bastardizedpetastorm.workers_pool.process_pool import ProcessPool
+from bastardizedpetastorm.workers_pool.thread_pool import ThreadPool
 
 logger = logging.getLogger(__name__)
 

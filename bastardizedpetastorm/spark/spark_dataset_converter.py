@@ -30,8 +30,8 @@ from pyspark.sql.session import SparkSession
 from pyspark.sql.types import ArrayType, DoubleType, FloatType
 from six.moves.urllib.parse import urlparse
 
-from petastorm import make_batch_reader
-from petastorm.fs_utils import (FilesystemResolver,
+from bastardizedpetastorm import make_batch_reader
+from bastardizedpetastorm.fs_utils import (FilesystemResolver,
                                 get_filesystem_and_path_or_paths, normalize_dir_url)
 from fsspec.core import strip_protocol
 
@@ -322,7 +322,7 @@ class TFDatasetContextManager(object):
 
     def __enter__(self):
         # import locally to avoid importing tensorflow globally.
-        from petastorm.tf_utils import make_petastorm_dataset
+        from bastardizedpetastorm.tf_utils import make_petastorm_dataset
         import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
         _wait_file_available(self.parquet_file_url_list)
@@ -389,7 +389,7 @@ class TorchDatasetContextManager(object):
         self.data_loader_fn = data_loader_fn
 
     def __enter__(self):
-        from petastorm.pytorch import DataLoader
+        from bastardizedpetastorm.pytorch import DataLoader
 
         _wait_file_available(self.parquet_file_url_list)
 

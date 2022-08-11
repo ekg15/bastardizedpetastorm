@@ -21,7 +21,7 @@ from traceback import format_exc
 
 from six.moves import queue
 
-from petastorm.workers_pool import EmptyResultError, VentilatedItemProcessedMessage
+from bastardizedpetastorm.workers_pool import EmptyResultError, VentilatedItemProcessedMessage
 
 # Defines how frequently will we check the stop event while waiting on a blocking queue
 IO_TIMEOUT_INTERVAL_S = 0.001

@@ -18,13 +18,13 @@ import numpy as np
 from pyspark.sql import SparkSession
 from pyspark.sql.types import IntegerType
 
-from petastorm import make_reader
-from petastorm.codecs import ScalarCodec
-from petastorm.etl.dataset_metadata import materialize_dataset
-from petastorm.predicates import in_set, in_intersection, \
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.codecs import ScalarCodec
+from bastardizedpetastorm.etl.dataset_metadata import materialize_dataset
+from bastardizedpetastorm.predicates import in_set, in_intersection, \
     in_negate, in_reduce, in_pseudorandom_split, in_lambda
-from petastorm.tests.test_common import TestSchema
-from petastorm.unischema import dict_to_spark_row, Unischema, UnischemaField
+from bastardizedpetastorm.tests.test_common import TestSchema
+from bastardizedpetastorm.unischema import dict_to_spark_row, Unischema, UnischemaField
 
 
 @pytest.fixture(scope="session")

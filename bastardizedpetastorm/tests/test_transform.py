@@ -15,8 +15,8 @@
 import numpy as np
 import pytest
 
-from petastorm.transform import edit_field, transform_schema, TransformSpec
-from petastorm.unischema import Unischema, UnischemaField
+from bastardizedpetastorm.transform import edit_field, transform_schema, TransformSpec
+from bastardizedpetastorm.unischema import Unischema, UnischemaField
 
 TestSchema = Unischema('TestSchema', [
     UnischemaField('string', np.unicode_, (), None, False),

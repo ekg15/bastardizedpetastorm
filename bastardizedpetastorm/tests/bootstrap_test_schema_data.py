@@ -16,7 +16,7 @@ from __future__ import print_function
 import getopt
 import sys
 
-from petastorm.tests.test_common import create_test_dataset
+from bastardizedpetastorm.tests.test_common import create_test_dataset
 
 
 # Number of rows in a fake dataset

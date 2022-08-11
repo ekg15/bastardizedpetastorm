@@ -19,15 +19,15 @@ import pytest
 import six
 import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
-from petastorm import make_reader
-from petastorm.ngram import NGram
-from petastorm.predicates import in_lambda
-from petastorm.pytorch import DataLoader
-from petastorm.test_util.reader_mock import ReaderMock
-from petastorm.tf_utils import tf_tensors, make_petastorm_dataset
-from petastorm.unischema import Unischema, UnischemaField
-from petastorm.weighted_sampling_reader import WeightedSamplingReader
-from petastorm.tests.test_tf_utils import create_tf_graph
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.ngram import NGram
+from bastardizedpetastorm.predicates import in_lambda
+from bastardizedpetastorm.pytorch import DataLoader
+from bastardizedpetastorm.test_util.reader_mock import ReaderMock
+from bastardizedpetastorm.tf_utils import tf_tensors, make_petastorm_dataset
+from bastardizedpetastorm.unischema import Unischema, UnischemaField
+from bastardizedpetastorm.weighted_sampling_reader import WeightedSamplingReader
+from bastardizedpetastorm.tests.test_tf_utils import create_tf_graph
 
 TestSchema = Unischema('TestSchema', [
     UnischemaField('f1', np.int32, (), None, False),

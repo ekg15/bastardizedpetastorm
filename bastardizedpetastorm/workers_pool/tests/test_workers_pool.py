@@ -21,13 +21,13 @@ from multiprocessing import Process, Manager
 from psutil import pid_exists
 
 
-from petastorm.workers_pool import EmptyResultError
-from petastorm.workers_pool.dummy_pool import DummyPool
-from petastorm.workers_pool.process_pool import ProcessPool
-from petastorm.workers_pool.tests.stub_workers import CoeffMultiplierWorker, \
+from bastardizedpetastorm.workers_pool import EmptyResultError
+from bastardizedpetastorm.workers_pool.dummy_pool import DummyPool
+from bastardizedpetastorm.workers_pool.process_pool import ProcessPool
+from bastardizedpetastorm.workers_pool.tests.stub_workers import CoeffMultiplierWorker, \
     WorkerIdGeneratingWorker, WorkerMultiIdGeneratingWorker, SleepyWorkerIdGeneratingWorker, \
     ExceptionGeneratingWorker_5, PreprogrammedReturnValueWorker
-from petastorm.workers_pool.thread_pool import ThreadPool
+from bastardizedpetastorm.workers_pool.thread_pool import ThreadPool
 
 
 class TestWorkersPool(unittest.TestCase):

@@ -23,7 +23,7 @@ from pyarrow.lib import ArrowIOError
 
 from unittest import mock
 
-from petastorm.hdfs.namenode import HdfsNamenodeResolver, HdfsConnector, \
+from bastardizedpetastorm.hdfs.namenode import HdfsNamenodeResolver, HdfsConnector, \
     HdfsConnectError, MaxFailoversExceeded, HAHdfsClient, namenode_failover
 
 

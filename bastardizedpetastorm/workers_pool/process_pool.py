@@ -28,9 +28,9 @@ from psutil import pid_exists
 import zmq
 from zmq import ZMQBaseError
 
-from petastorm.reader_impl.pickle_serializer import PickleSerializer
-from petastorm.workers_pool import EmptyResultError, VentilatedItemProcessedMessage
-from petastorm.workers_pool.exec_in_new_process import exec_in_new_process
+from bastardizedpetastorm.reader_impl.pickle_serializer import PickleSerializer
+from bastardizedpetastorm.workers_pool import EmptyResultError, VentilatedItemProcessedMessage
+from bastardizedpetastorm.workers_pool.exec_in_new_process import exec_in_new_process
 
 # When _CONTROL_FINISHED is passed via control socket to a worker, the worker will terminate
 _CONTROL_FINISHED = "FINISHED"

@@ -18,7 +18,7 @@ from decimal import Decimal
 
 import numpy as np
 
-from petastorm.reader_impl.pickle_serializer import PickleSerializer
+from bastardizedpetastorm.reader_impl.pickle_serializer import PickleSerializer
 
 
 def _foo():

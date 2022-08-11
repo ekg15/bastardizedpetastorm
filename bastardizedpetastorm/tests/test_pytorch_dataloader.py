@@ -7,11 +7,11 @@ import pytest
 # Must import pyarrow before torch. See: https://github.com/uber/petastorm/blob/master/docs/troubleshoot.rst
 import torch
 
-from petastorm import make_reader, TransformSpec, make_batch_reader
-from petastorm.pytorch import (_sanitize_pytorch_types, DataLoader,
+from bastardizedpetastorm import make_reader, TransformSpec, make_batch_reader
+from bastardizedpetastorm.pytorch import (_sanitize_pytorch_types, DataLoader,
                                BatchedDataLoader, decimal_friendly_collate,
                                InMemBatchedDataLoader, _load_rows_into_mem)
-from petastorm.tests.test_common import TestSchema
+from bastardizedpetastorm.tests.test_common import TestSchema
 
 BASIC_DATA_LOADERS = [DataLoader, BatchedDataLoader]
 

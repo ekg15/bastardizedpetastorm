@@ -14,7 +14,7 @@
 
 from time import sleep
 
-from petastorm.workers_pool.worker_base import WorkerBase
+from bastardizedpetastorm.workers_pool.worker_base import WorkerBase
 
 
 class CoeffMultiplierWorker(WorkerBase):

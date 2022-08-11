@@ -18,10 +18,10 @@ from functools import partial
 import numpy as np
 from pyspark.sql.types import LongType
 
-from petastorm import make_reader
-from petastorm.codecs import ScalarCodec
-from petastorm.etl.dataset_metadata import materialize_dataset
-from petastorm.unischema import Unischema, UnischemaField, dict_to_spark_row
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.codecs import ScalarCodec
+from bastardizedpetastorm.etl.dataset_metadata import materialize_dataset
+from bastardizedpetastorm.unischema import Unischema, UnischemaField, dict_to_spark_row
 
 _ShuffleAnalysisSchema = Unischema('_ShuffleAnalysisSchema',
                                    [UnischemaField('id', np.int64, (), ScalarCodec(LongType()), False)])

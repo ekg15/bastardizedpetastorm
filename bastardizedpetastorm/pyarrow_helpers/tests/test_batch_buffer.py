@@ -15,7 +15,7 @@
 import numpy as np
 import pyarrow as pa
 
-from petastorm.pyarrow_helpers.batching_table_queue import BatchingTableQueue
+from bastardizedpetastorm.pyarrow_helpers.batching_table_queue import BatchingTableQueue
 
 
 def _new_record_batch(values):

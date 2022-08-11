@@ -21,8 +21,8 @@ from collections import namedtuple
 import pytest
 import six
 
-from petastorm.spark import spark_dataset_converter, SparkDatasetConverter
-from petastorm.tests.test_common import create_test_dataset, create_test_scalar_dataset, \
+from bastardizedpetastorm.spark import spark_dataset_converter, SparkDatasetConverter
+from bastardizedpetastorm.tests.test_common import create_test_dataset, create_test_scalar_dataset, \
     create_many_columns_non_petastorm_dataset
 from pyspark.sql import SparkSession
 

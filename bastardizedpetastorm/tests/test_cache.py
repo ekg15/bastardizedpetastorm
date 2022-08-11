@@ -14,7 +14,7 @@
 
 import unittest
 
-from petastorm.cache import NullCache
+from bastardizedpetastorm.cache import NullCache
 
 
 class TestNullCache(unittest.TestCase):

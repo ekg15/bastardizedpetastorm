@@ -18,8 +18,8 @@ import numpy as np
 import pandas as pd
 import pyarrow as pa
 
-from petastorm.local_disk_arrow_table_cache import LocalDiskArrowTableCache
-from petastorm.local_disk_cache import LocalDiskCache
+from bastardizedpetastorm.local_disk_arrow_table_cache import LocalDiskArrowTableCache
+from bastardizedpetastorm.local_disk_cache import LocalDiskCache
 
 MB = 2 ** 20
 KB = 2 ** 10

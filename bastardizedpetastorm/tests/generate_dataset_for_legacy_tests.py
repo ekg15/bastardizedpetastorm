@@ -13,13 +13,13 @@
 # limitations under the License.
 import os
 
-import petastorm
-from petastorm.tests.test_common import create_test_dataset
+import bastardizedpetastorm
+from bastardizedpetastorm.tests.test_common import create_test_dataset
 
 
 def generate_dataset_for_legacy_test():
     """Generates a test dataset and stores it into petastorm/tests/data/legacy/x.x.x folder. The version number
-    is acquired automatically from petastorm.__version__"""
+    is acquired automatically from bastardizedpetastorm.__version__"""
     dataset_name = petastorm.__version__
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'legacy', dataset_name)
     url = 'file://' + path

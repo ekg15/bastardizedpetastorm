@@ -26,16 +26,16 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import LongType, ShortType, StringType
 from six.moves.urllib.parse import urlparse
 
-from petastorm import make_reader, make_batch_reader, TransformSpec
-from petastorm.codecs import ScalarCodec, CompressedImageCodec
-from petastorm.errors import NoDataAvailableError
-from petastorm.etl.dataset_metadata import materialize_dataset
-from petastorm.predicates import in_lambda
-from petastorm.selectors import SingleIndexSelector, IntersectIndexSelector, UnionIndexSelector
-from petastorm.tests.test_common import create_test_dataset, TestSchema, create_test_scalar_dataset
-from petastorm.tests.test_end_to_end_predicates_impl import \
+from bastardizedpetastorm import make_reader, make_batch_reader, TransformSpec
+from bastardizedpetastorm.codecs import ScalarCodec, CompressedImageCodec
+from bastardizedpetastorm.errors import NoDataAvailableError
+from bastardizedpetastorm.etl.dataset_metadata import materialize_dataset
+from bastardizedpetastorm.predicates import in_lambda
+from bastardizedpetastorm.selectors import SingleIndexSelector, IntersectIndexSelector, UnionIndexSelector
+from bastardizedpetastorm.tests.test_common import create_test_dataset, TestSchema, create_test_scalar_dataset
+from bastardizedpetastorm.tests.test_end_to_end_predicates_impl import \
     PartitionKeyInSetPredicate, EqualPredicate, VectorizedEqualPredicate
-from petastorm.unischema import UnischemaField, Unischema
+from bastardizedpetastorm.unischema import UnischemaField, Unischema
 
 # pylint: disable=unnecessary-lambda
 MINIMAL_READER_FLAVOR_FACTORIES = [

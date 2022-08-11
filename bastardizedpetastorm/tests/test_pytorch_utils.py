@@ -15,9 +15,9 @@ from __future__ import division
 
 import numpy as np
 
-from petastorm import make_reader, TransformSpec
-from petastorm.pytorch import DataLoader
-from petastorm.tests.test_common import TestSchema
+from bastardizedpetastorm import make_reader, TransformSpec
+from bastardizedpetastorm.pytorch import DataLoader
+from bastardizedpetastorm.tests.test_common import TestSchema
 
 ALL_FIELDS = set(TestSchema.fields.values())
 NULLABLE_FIELDS = {f for f in TestSchema.fields.values() if f.nullable}

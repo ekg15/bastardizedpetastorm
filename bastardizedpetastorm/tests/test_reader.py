@@ -16,8 +16,8 @@ from time import sleep
 import pyarrow.parquet as pq
 import pytest
 
-from petastorm import make_reader
-from petastorm.reader import Reader
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.reader import Reader
 
 # pylint: disable=unnecessary-lambda
 READER_FACTORIES = [

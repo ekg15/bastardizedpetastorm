@@ -18,7 +18,7 @@ import argparse
 import pytest
 from pyspark.sql import SparkSession
 
-from petastorm.tools.spark_session_cli import add_configure_spark_arguments, configure_spark
+from bastardizedpetastorm.tools.spark_session_cli import add_configure_spark_arguments, configure_spark
 
 
 @pytest.fixture(scope='session')

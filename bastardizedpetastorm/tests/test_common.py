@@ -26,12 +26,12 @@ from pyspark.sql import SparkSession
 from pyspark.sql.types import StringType, DecimalType, DoubleType, StructField, \
     IntegerType, StructType, DateType, TimestampType, ShortType, ArrayType
 
-from petastorm.codecs import CompressedImageCodec, NdarrayCodec, \
+from bastardizedpetastorm.codecs import CompressedImageCodec, NdarrayCodec, \
     ScalarCodec
-from petastorm.etl.dataset_metadata import materialize_dataset
-from petastorm.etl.rowgroup_indexers import SingleFieldIndexer
-from petastorm.etl.rowgroup_indexing import build_rowgroup_index
-from petastorm.unischema import Unischema, UnischemaField, dict_to_spark_row
+from bastardizedpetastorm.etl.dataset_metadata import materialize_dataset
+from bastardizedpetastorm.etl.rowgroup_indexers import SingleFieldIndexer
+from bastardizedpetastorm.etl.rowgroup_indexing import build_rowgroup_index
+from bastardizedpetastorm.unischema import Unischema, UnischemaField, dict_to_spark_row
 
 _DEFAULT_IMAGE_SIZE = (32, 16, 3)
 

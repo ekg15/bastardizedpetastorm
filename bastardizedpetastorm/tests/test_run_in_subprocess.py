@@ -15,8 +15,8 @@
 import unittest
 from functools import partial
 
-from petastorm.unischema import dict_to_spark_row, Unischema
-from petastorm.utils import run_in_subprocess
+from bastardizedpetastorm.unischema import dict_to_spark_row, Unischema
+from bastardizedpetastorm.utils import run_in_subprocess
 
 
 def builtin_func():

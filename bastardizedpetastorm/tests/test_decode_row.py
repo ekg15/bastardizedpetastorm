@@ -17,9 +17,9 @@ import numpy as np
 import pytest
 from pyspark.sql.types import DoubleType
 
-from petastorm.codecs import NdarrayCodec, ScalarCodec
-from petastorm.unischema import UnischemaField, Unischema
-from petastorm.utils import decode_row, DecodeFieldError
+from bastardizedpetastorm.codecs import NdarrayCodec, ScalarCodec
+from bastardizedpetastorm.unischema import UnischemaField, Unischema
+from bastardizedpetastorm.utils import decode_row, DecodeFieldError
 
 MatrixField = UnischemaField('matrix', np.float64, (10, 10), NdarrayCodec(), False)
 MatrixSchema = Unischema('TestSchema', [MatrixField])

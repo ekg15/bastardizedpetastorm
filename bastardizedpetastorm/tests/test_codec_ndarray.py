@@ -15,8 +15,8 @@
 import numpy as np
 import pytest
 
-from petastorm.codecs import NdarrayCodec, CompressedNdarrayCodec
-from petastorm.unischema import UnischemaField
+from bastardizedpetastorm.codecs import NdarrayCodec, CompressedNdarrayCodec
+from bastardizedpetastorm.unischema import UnischemaField
 
 NUMERIC_DTYPES = [np.uint8, np.int8, np.uint16, np.int16, np.uint32, np.int32, np.uint64, np.int64, np.float32,
                   np.float64]

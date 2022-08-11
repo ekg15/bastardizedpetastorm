@@ -16,12 +16,12 @@
 import time
 import unittest
 
-from petastorm.workers_pool import EmptyResultError
-from petastorm.workers_pool.dummy_pool import DummyPool
-from petastorm.workers_pool.process_pool import ProcessPool
-from petastorm.workers_pool.tests.stub_workers import IdentityWorker
-from petastorm.workers_pool.thread_pool import ThreadPool
-from petastorm.workers_pool.ventilator import ConcurrentVentilator
+from bastardizedpetastorm.workers_pool import EmptyResultError
+from bastardizedpetastorm.workers_pool.dummy_pool import DummyPool
+from bastardizedpetastorm.workers_pool.process_pool import ProcessPool
+from bastardizedpetastorm.workers_pool.tests.stub_workers import IdentityWorker
+from bastardizedpetastorm.workers_pool.thread_pool import ThreadPool
+from bastardizedpetastorm.workers_pool.ventilator import ConcurrentVentilator
 
 
 class TestWorkersPool(unittest.TestCase):

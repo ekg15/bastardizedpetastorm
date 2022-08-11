@@ -18,8 +18,8 @@ from __future__ import print_function
 import argparse
 from pyarrow import parquet as pq
 
-from petastorm.etl import dataset_metadata, rowgroup_indexing
-from petastorm.fs_utils import FilesystemResolver
+from bastardizedpetastorm.etl import dataset_metadata, rowgroup_indexing
+from bastardizedpetastorm.fs_utils import FilesystemResolver
 
 if __name__ == "__main__":
 

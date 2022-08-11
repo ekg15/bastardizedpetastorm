@@ -25,10 +25,10 @@ from functools import reduce  # pylint: disable=W0622
 
 from pyspark.sql import SparkSession
 
-from petastorm.unischema import match_unischema_fields
-from petastorm.etl.dataset_metadata import materialize_dataset, get_schema_from_dataset_url
-from petastorm.tools.spark_session_cli import add_configure_spark_arguments, configure_spark
-from petastorm.fs_utils import FilesystemResolver
+from bastardizedpetastorm.unischema import match_unischema_fields
+from bastardizedpetastorm.etl.dataset_metadata import materialize_dataset, get_schema_from_dataset_url
+from bastardizedpetastorm.tools.spark_session_cli import add_configure_spark_arguments, configure_spark
+from bastardizedpetastorm.fs_utils import FilesystemResolver
 
 
 def copy_dataset(spark, source_url, target_url, field_regex, not_null_fields, overwrite_output, partitions_count,

@@ -17,7 +17,7 @@ import six
 
 from unittest import mock
 
-from petastorm.benchmark.throughput import reader_throughput, _time_warmup_and_work, WorkerPoolType, ReadMethod
+from bastardizedpetastorm.benchmark.throughput import reader_throughput, _time_warmup_and_work, WorkerPoolType, ReadMethod
 
 
 def test_pure_python_process_pool_run(synthetic_dataset):

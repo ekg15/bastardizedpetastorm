@@ -5,10 +5,10 @@ from shutil import copytree
 import pyarrow.parquet as pq
 import pytest
 
-from petastorm import make_reader
-from petastorm.etl import petastorm_generate_metadata
-from petastorm.selectors import SingleIndexSelector
-from petastorm.tests.test_common import create_test_dataset, TestSchema
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.etl import petastorm_generate_metadata
+from bastardizedpetastorm.selectors import SingleIndexSelector
+from bastardizedpetastorm.tests.test_common import create_test_dataset, TestSchema
 
 ROWS_COUNT = 1000
 

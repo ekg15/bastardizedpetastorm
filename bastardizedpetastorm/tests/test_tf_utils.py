@@ -28,12 +28,12 @@ import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
 from unittest import mock
 
-from petastorm import make_reader, make_batch_reader, TransformSpec
-from petastorm.ngram import NGram
-from petastorm.tests.test_common import TestSchema
-from petastorm.tf_utils import _sanitize_field_tf_types, _numpy_to_tf_dtypes, \
+from bastardizedpetastorm import make_reader, make_batch_reader, TransformSpec
+from bastardizedpetastorm.ngram import NGram
+from bastardizedpetastorm.tests.test_common import TestSchema
+from bastardizedpetastorm.tf_utils import _sanitize_field_tf_types, _numpy_to_tf_dtypes, \
     _schema_to_tf_dtypes, tf_tensors, _ngrams_generator, _unflatten_and_set_shape
-from petastorm.unischema import Unischema, UnischemaField
+from bastardizedpetastorm.unischema import Unischema, UnischemaField
 
 NON_NULLABLE_FIELDS = set(TestSchema.fields.values()) - \
                       {TestSchema.matrix_nullable, TestSchema.string_array_nullable, TestSchema.integer_nullable}

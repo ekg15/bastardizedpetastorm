@@ -20,8 +20,8 @@ from tempfile import mkdtemp
 import numpy as np
 from pyspark.sql import SparkSession
 
-from petastorm.spark_utils import dataset_as_rdd
-from petastorm.tests.test_common import create_test_dataset, TestSchema
+from bastardizedpetastorm.spark_utils import dataset_as_rdd
+from bastardizedpetastorm.tests.test_common import create_test_dataset, TestSchema
 
 
 class TestSparkUtils(unittest.TestCase):

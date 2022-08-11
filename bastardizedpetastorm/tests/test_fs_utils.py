@@ -20,8 +20,8 @@ from six.moves.urllib.parse import urlparse
 import gcsfs
 import s3fs
 
-from petastorm.fs_utils import FilesystemResolver, get_filesystem_and_path_or_paths
-from petastorm.hdfs.tests.test_hdfs_namenode import HC, MockHadoopConfiguration, \
+from bastardizedpetastorm.fs_utils import FilesystemResolver, get_filesystem_and_path_or_paths
+from bastardizedpetastorm.hdfs.tests.test_hdfs_namenode import HC, MockHadoopConfiguration, \
     MockHdfs, MockHdfsConnector
 
 ABS_PATH = '/abs/path'

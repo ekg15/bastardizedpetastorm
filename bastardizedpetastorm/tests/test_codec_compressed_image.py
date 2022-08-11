@@ -17,8 +17,8 @@ import numpy as np
 import pytest
 from PIL import Image
 
-from petastorm.codecs import CompressedImageCodec
-from petastorm.unischema import UnischemaField
+from bastardizedpetastorm.codecs import CompressedImageCodec
+from bastardizedpetastorm.unischema import UnischemaField
 
 
 def test_png():

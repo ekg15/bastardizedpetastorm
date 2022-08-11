@@ -15,7 +15,7 @@ from __future__ import print_function
 from __future__ import division
 import time
 import numpy as np
-from petastorm.pytorch import BatchedDataLoader, DataLoader
+from bastardizedpetastorm.pytorch import BatchedDataLoader, DataLoader
 from collections import namedtuple
 import torch
 from functools import partial

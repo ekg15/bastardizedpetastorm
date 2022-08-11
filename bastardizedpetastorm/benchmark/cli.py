@@ -21,7 +21,7 @@ import argparse
 import logging
 import sys
 
-from petastorm.benchmark.throughput import reader_throughput, \
+from bastardizedpetastorm.benchmark.throughput import reader_throughput, \
     WorkerPoolType, ReadMethod
 
 logger = logging.getLogger(__name__)

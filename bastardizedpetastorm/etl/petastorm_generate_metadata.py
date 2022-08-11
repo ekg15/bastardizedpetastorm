@@ -21,11 +21,11 @@ from pydoc import locate
 from pyarrow import parquet as pq
 from pyspark.sql import SparkSession
 
-from petastorm.etl.dataset_metadata import materialize_dataset, get_schema, ROW_GROUPS_PER_FILE_KEY
-from petastorm.etl.rowgroup_indexing import ROWGROUPS_INDEX_KEY
-from petastorm.fs_utils import FilesystemResolver
-from petastorm.unischema import Unischema
-from petastorm.utils import add_to_dataset_metadata
+from bastardizedpetastorm.etl.dataset_metadata import materialize_dataset, get_schema, ROW_GROUPS_PER_FILE_KEY
+from bastardizedpetastorm.etl.rowgroup_indexing import ROWGROUPS_INDEX_KEY
+from bastardizedpetastorm.fs_utils import FilesystemResolver
+from bastardizedpetastorm.unischema import Unischema
+from bastardizedpetastorm.utils import add_to_dataset_metadata
 
 example_text = '''Example (some replacement required):
 

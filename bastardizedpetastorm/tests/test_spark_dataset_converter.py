@@ -31,11 +31,11 @@ from pyspark.sql.types import (ArrayType, BinaryType, BooleanType, ByteType,
                                ShortType, StringType, StructField, StructType)
 from six.moves.urllib.parse import urlparse
 
-from petastorm import make_batch_reader
-from petastorm.fs_utils import FilesystemResolver
-from petastorm.spark import (SparkDatasetConverter, make_spark_converter,
+from bastardizedpetastorm import make_batch_reader
+from bastardizedpetastorm.fs_utils import FilesystemResolver
+from bastardizedpetastorm.spark import (SparkDatasetConverter, make_spark_converter,
                              spark_dataset_converter)
-from petastorm.spark.spark_dataset_converter import (
+from bastardizedpetastorm.spark.spark_dataset_converter import (
     _check_dataset_file_median_size, _check_parent_cache_dir_url,
     _check_rank_and_size_consistent_with_horovod, _check_url,
     _get_horovod_rank_and_size, _get_spark_session, _make_sub_dir_url,
@@ -43,7 +43,7 @@ from petastorm.spark.spark_dataset_converter import (
 
 from unittest import mock
 
-from petastorm.tests.test_tf_utils import create_tf_graph
+from bastardizedpetastorm.tests.test_tf_utils import create_tf_graph
 
 
 @create_tf_graph
@@ -133,7 +133,7 @@ def test_delete(spark_test_ctx):
 
 def test_atexit(spark_test_ctx):
     lines = """
-    from petastorm.spark import SparkDatasetConverter, make_spark_converter
+    from bastardizedpetastorm.spark import SparkDatasetConverter, make_spark_converter
     from pyspark.sql import SparkSession
     import os
     spark = SparkSession.builder.getOrCreate()
@@ -241,7 +241,7 @@ def test_df_caching(spark_test_ctx):
 
 
 def test_df_delete_caching_meta(spark_test_ctx):
-    from petastorm.spark.spark_dataset_converter import _cache_df_meta_list
+    from bastardizedpetastorm.spark.spark_dataset_converter import _cache_df_meta_list
     df1 = spark_test_ctx.spark.range(10)
     df2 = spark_test_ctx.spark.range(20)
     converter1 = make_spark_converter(df1)
@@ -497,7 +497,7 @@ def test_torch_transform_spec(spark_test_ctx):
     conv = make_spark_converter(df)
 
     from torchvision import transforms
-    from petastorm import TransformSpec
+    from bastardizedpetastorm import TransformSpec
 
     def _transform_row(df_row):
         scale_tranform = transforms.Compose([
@@ -522,7 +522,7 @@ def test_torch_unexpected_param(spark_test_ctx):
 
 
 def test_torch_data_loader_fn(spark_test_ctx):
-    from petastorm.pytorch import BatchedDataLoader
+    from bastardizedpetastorm.pytorch import BatchedDataLoader
 
     df = spark_test_ctx.spark.range(8)
     conv = make_spark_converter(df)

@@ -24,10 +24,10 @@ from packaging import version
 from pyarrow import parquet as pq
 from six.moves import cPickle as pickle
 
-from petastorm import utils
-from petastorm.etl.legacy import depickle_legacy_package_name_compatible
-from petastorm.fs_utils import FilesystemResolver, get_filesystem_and_path_or_paths, get_dataset_path
-from petastorm.unischema import Unischema
+from bastardizedpetastorm import utils
+from bastardizedpetastorm.etl.legacy import depickle_legacy_package_name_compatible
+from bastardizedpetastorm.fs_utils import FilesystemResolver, get_filesystem_and_path_or_paths, get_dataset_path
+from bastardizedpetastorm.unischema import Unischema
 
 logger = logging.getLogger(__name__)
 

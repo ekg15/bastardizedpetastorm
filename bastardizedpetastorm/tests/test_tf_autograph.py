@@ -14,8 +14,8 @@
 
 import pytest
 
-from petastorm.spark import make_spark_converter
-from petastorm.tests.test_tf_utils import _IS_TF_VERSION_1
+from bastardizedpetastorm.spark import make_spark_converter
+from bastardizedpetastorm.tests.test_tf_utils import _IS_TF_VERSION_1
 
 
 @pytest.mark.skipif(_IS_TF_VERSION_1, reason="Only test autograph transform on tensorflow>=2")

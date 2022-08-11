@@ -16,7 +16,7 @@ import unittest
 from shutil import move, rmtree
 from tempfile import mkdtemp
 
-from petastorm.tests.test_common import create_test_dataset
+from bastardizedpetastorm.tests.test_common import create_test_dataset
 
 # Tiny count of rows in a fake dataset
 ROWS_COUNT = 10

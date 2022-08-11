@@ -19,12 +19,12 @@ import pandas as pd
 import pytest
 from pyarrow import parquet as pq
 
-from petastorm import make_batch_reader
-from petastorm.arrow_reader_worker import ArrowReaderWorker
+from bastardizedpetastorm import make_batch_reader
+from bastardizedpetastorm.arrow_reader_worker import ArrowReaderWorker
 # pylint: disable=unnecessary-lambda
-from petastorm.tests.test_common import create_test_scalar_dataset
-from petastorm.transform import TransformSpec
-from petastorm.unischema import UnischemaField
+from bastardizedpetastorm.tests.test_common import create_test_scalar_dataset
+from bastardizedpetastorm.transform import TransformSpec
+from bastardizedpetastorm.unischema import UnischemaField
 
 _D = [lambda url, **kwargs: make_batch_reader(url, reader_pool_type='dummy', **kwargs)]
 

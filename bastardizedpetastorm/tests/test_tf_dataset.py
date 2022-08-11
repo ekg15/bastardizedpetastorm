@@ -20,12 +20,12 @@ import numpy as np
 import pytest
 import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
-from petastorm import make_reader, make_batch_reader
-from petastorm.ngram import NGram
-from petastorm.predicates import in_lambda
-from petastorm.tests.test_common import TestSchema
-from petastorm.tests.test_tf_utils import create_tf_graph
-from petastorm.tf_utils import make_petastorm_dataset
+from bastardizedpetastorm import make_reader, make_batch_reader
+from bastardizedpetastorm.ngram import NGram
+from bastardizedpetastorm.predicates import in_lambda
+from bastardizedpetastorm.tests.test_common import TestSchema
+from bastardizedpetastorm.tests.test_tf_utils import create_tf_graph
+from bastardizedpetastorm.tf_utils import make_petastorm_dataset
 
 _EXCLUDE_FIELDS = set(TestSchema.fields.values()) \
                   - {TestSchema.matrix_nullable, TestSchema.string_array_nullable, TestSchema.decimal,

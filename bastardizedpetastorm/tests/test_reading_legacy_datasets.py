@@ -15,7 +15,7 @@ import os
 
 import pytest
 
-from petastorm import make_reader
+from bastardizedpetastorm import make_reader
 
 
 def dataset_urls():

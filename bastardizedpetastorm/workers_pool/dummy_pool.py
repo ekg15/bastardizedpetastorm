@@ -14,7 +14,7 @@
 
 from time import sleep
 
-from petastorm.workers_pool import EmptyResultError
+from bastardizedpetastorm.workers_pool import EmptyResultError
 
 
 class DummyPool(object):

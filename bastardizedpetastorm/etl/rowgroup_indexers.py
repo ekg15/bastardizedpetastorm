@@ -15,7 +15,7 @@
 import numpy as np
 from collections import defaultdict
 
-from petastorm.etl import RowGroupIndexerBase
+from bastardizedpetastorm.etl import RowGroupIndexerBase
 
 
 class SingleFieldIndexer(RowGroupIndexerBase):

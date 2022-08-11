@@ -20,10 +20,10 @@ from pyarrow import parquet as pq
 from six.moves import cPickle as pickle
 from six.moves import range
 
-from petastorm import utils
-from petastorm.etl import dataset_metadata
-from petastorm.etl.legacy import depickle_legacy_package_name_compatible
-from petastorm.fs_utils import FilesystemResolver
+from bastardizedpetastorm import utils
+from bastardizedpetastorm.etl import dataset_metadata
+from bastardizedpetastorm.etl.legacy import depickle_legacy_package_name_compatible
+from bastardizedpetastorm.fs_utils import FilesystemResolver
 
 logger = logging.getLogger(__name__)
 

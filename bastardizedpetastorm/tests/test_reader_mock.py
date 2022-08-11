@@ -18,10 +18,10 @@ from decimal import Decimal
 import pytest
 import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
-from petastorm.test_util.reader_mock import ReaderMock, schema_data_generator_example
-from petastorm.tests.test_end_to_end import TestSchema
-from petastorm.tf_utils import tf_tensors, _numpy_to_tf_dtypes
-from petastorm.tests.test_tf_utils import create_tf_graph
+from bastardizedpetastorm.test_util.reader_mock import ReaderMock, schema_data_generator_example
+from bastardizedpetastorm.tests.test_end_to_end import TestSchema
+from bastardizedpetastorm.tf_utils import tf_tensors, _numpy_to_tf_dtypes
+from bastardizedpetastorm.tests.test_tf_utils import create_tf_graph
 
 
 class ReaderMockTest(unittest.TestCase):

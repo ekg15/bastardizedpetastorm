@@ -20,12 +20,12 @@ import tensorflow.compat.v1 as tf  # pylint: disable=import-error
 
 from unittest import mock
 
-from petastorm import make_reader
-from petastorm.ngram import NGram
-from petastorm.tests.conftest import SyntheticDataset, maybe_cached_dataset
-from petastorm.tests.test_common import create_test_dataset, TestSchema
-from petastorm.tests.test_tf_utils import create_tf_graph
-from petastorm.tf_utils import tf_tensors
+from bastardizedpetastorm import make_reader
+from bastardizedpetastorm.ngram import NGram
+from bastardizedpetastorm.tests.conftest import SyntheticDataset, maybe_cached_dataset
+from bastardizedpetastorm.tests.test_common import create_test_dataset, TestSchema
+from bastardizedpetastorm.tests.test_tf_utils import create_tf_graph
+from bastardizedpetastorm.tf_utils import tf_tensors
 
 # Tests in this module will run once for each entry in the READER_FACTORIES
 # pylint: disable=unnecessary-lambda
