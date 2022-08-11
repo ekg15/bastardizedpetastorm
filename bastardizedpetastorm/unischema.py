@@ -105,6 +105,7 @@ class _NamedtupleCache(object):
         else:
             field_names = list(field_names)
         key = ' '.join([parent_schema_name] + field_names)
+        print("here!!!!" * 20)
         if key not in _NamedtupleCache._store:
             _NamedtupleCache._store[key] = _new_gt_255_compatible_namedtuple(
                 '{}_view'.format(parent_schema_name), field_names)
@@ -295,7 +296,7 @@ class Unischema(object):
                 typed_dict[key] = kargs[key]
             else:
                 typed_dict[key] = None
-	print(typed_dict)
+        print(typed_dict)
         return self._get_namedtuple()(**typed_dict)
 
     def make_namedtuple_tf(self, *args, **kargs):
