@@ -13,7 +13,7 @@
 # limitations under the License.
 import warnings
 
-from petastorm.unischema import UnischemaField, Unischema
+from bastardizedpetastorm.unischema import UnischemaField, Unischema
 
 
 def edit_field(name, numpy_dtype, shape, nullable=False):
