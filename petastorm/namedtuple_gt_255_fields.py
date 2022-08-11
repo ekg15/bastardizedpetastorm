@@ -128,8 +128,7 @@ def namedtuple_gt_255_fields(typename, field_names, verbose=False, rename=False,
     if rename:
         seen = set()
         for index, name in enumerate(field_names):
-            if (not name.isidentifier()
-                    or _iskeyword(name)
+            if (_iskeyword(name)
                     or name.startswith('_')
                     or name in seen):
                 field_names[index] = '_%d' % index
@@ -137,9 +136,6 @@ def namedtuple_gt_255_fields(typename, field_names, verbose=False, rename=False,
     for name in [typename] + field_names:
         if type(name) is not str:
             raise TypeError('Type names and field names must be strings')
-        if not name.isidentifier():
-            raise ValueError('Type names and field names must be valid '
-                             'identifiers: %r' % name)
         if _iskeyword(name):
             raise ValueError('Type names and field names cannot be a '
                              'keyword: %r' % name)
