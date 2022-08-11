@@ -298,10 +298,11 @@ class Unischema(object):
         >>> some_schema.make_namedtuple(field1=10, field2='abc')
         """
         # TODO(yevgeni): verify types
+        print(kargs)
         typed_dict = dict()
         for key in kargs.keys():
             if kargs[key] is not None:
-                typed_dict[key] = "a" + kargs[key]
+                typed_dict[key] = kargs[key]
             else:
                 typed_dict[key] = None
         print("typed_dict" * 20)
