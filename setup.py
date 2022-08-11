@@ -24,10 +24,10 @@ PACKAGE_NAME = 'bastardizedpetastorm'
 with open('README.rst') as f:
     long_description = f.read()
 
-with io.open('petastorm/__init__.py', 'rt', encoding='utf8') as f:
+with io.open('bastardizedpetastorm/__init__.py', 'rt', encoding='utf8') as f:
     version = re.search(r'__version__ = \'(.*?)\'', f.read()).group(1)
     if version is None:
-        raise ImportError('Could not find __version__ in petastorm/__init__.py')
+        raise ImportError('Could not find __version__ in bastardizedpetastorm/__init__.py')
 
 REQUIRED_PACKAGES = [
     'dill>=0.2.1',
