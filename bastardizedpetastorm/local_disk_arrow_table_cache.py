@@ -14,7 +14,7 @@
 
 import pyarrow as pa
 
-from petastorm.local_disk_cache import LocalDiskCache
+from bastardizedpetastorm.local_disk_cache import LocalDiskCache
 
 
 class LocalDiskArrowTableCache(LocalDiskCache):
