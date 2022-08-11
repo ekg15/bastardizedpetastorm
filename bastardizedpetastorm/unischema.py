@@ -187,7 +187,6 @@ class Unischema(object):
     """
 
     def __init__(self, name, fields):
-        print(fields)
         """Creates an instance of a Unischema object.
 
         :param name: name of the schema
@@ -199,6 +198,7 @@ class Unischema(object):
             fields = sorted(fields, key=lambda t: t.name)
 
         self._fields = OrderedDict([(f.name, f) for f in fields])
+        print(self._fields.values())
         # Generates attributes named by the field names as an access syntax sugar.
         for f in fields:
             if not hasattr(self, f.name):
