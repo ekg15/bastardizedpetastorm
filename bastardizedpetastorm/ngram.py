@@ -13,7 +13,7 @@
 # limitations under the License.
 import numbers
 
-from petastorm.unischema import UnischemaField, match_unischema_fields
+from bastardizedpetastorm.unischema import UnischemaField, match_unischema_fields
 from six import string_types
 
 
