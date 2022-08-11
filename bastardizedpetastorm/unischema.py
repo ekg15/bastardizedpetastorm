@@ -105,18 +105,18 @@ class _NamedtupleCache(object):
         else:
             field_names = list(field_names)
         key = ' '.join([parent_schema_name] + field_names)
-        print("here!!!!" * 20)
-        print(_NamedtupleCache._store)
-        print("field names TUPLECACHE GET" * 8)
-        print(field_names)
+        #print("here!!!!" * 20)
+        #print(_NamedtupleCache._store)
+        #print("field names TUPLECACHE GET" * 8)
+        #print(field_names)
         if key not in _NamedtupleCache._store:
             _NamedtupleCache._store[key] = _new_gt_255_compatible_namedtuple(
                 '{}_view'.format(parent_schema_name), field_names)
-        print("here?" * 20)
-        print(_NamedtupleCache._store)
-        print("here???" * 20)
-        print(_NamedtupleCache._store[key])
-        print(key)
+        #print("here?" * 20)
+        #print(_NamedtupleCache._store)
+        #print("here???" * 20)
+        #print(_NamedtupleCache._store[key])
+        #print(key)
         return _NamedtupleCache._store[key]
 
 
@@ -298,15 +298,16 @@ class Unischema(object):
         >>> some_schema.make_namedtuple(field1=10, field2='abc')
         """
         # TODO(yevgeni): verify types
-        print(kargs)
+        #print("kargs" * 30)
+        #print(kargs)
         typed_dict = dict()
         for key in kargs.keys():
             if kargs[key] is not None:
                 typed_dict[key] = kargs[key]
             else:
                 typed_dict[key] = None
-        print("typed_dict" * 20)
-        print(typed_dict)
+        #print("typed_dict" * 20)
+        #print(typed_dict)
         # need to change **typed_dict
         return self._get_namedtuple()(**typed_dict)
 

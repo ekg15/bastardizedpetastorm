@@ -148,8 +148,8 @@ def namedtuple_gt_255_fields(typename, field_names, verbose=False, rename=False,
         if name in seen:
             raise ValueError('Encountered duplicate field name: %r' % name)
         seen.add(name)
-    print("field_names inner func" * 10)
-    print(field_names)
+    #print("field_names inner func" * 10)
+    #print(field_names)
 
     # Fill-in the class template
     class_definition = _class_template.format(
