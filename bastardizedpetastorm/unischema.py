@@ -365,7 +365,7 @@ class Unischema(object):
                 else:
                     raise
             unischema_fields.append(UnischemaField(column_name, np_type, field_shape, None, arrow_field.nullable))
-        return Unischema('inferred_schema', unischema_fields)
+        return Unischema('inferred_schema?', unischema_fields)
 
     def __getattr__(self, item) -> Any:
         return super().__getattribute__(item)
