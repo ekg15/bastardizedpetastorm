@@ -57,6 +57,7 @@ class TransformSpec(object):
         self.selected_fields = selected_fields
 
 
+# Note: By the time this is called, we've already applied our column renaming fix
 def transform_schema(schema, transform_spec):
     """Creates a post-transform given a pre-transform schema and a transform_spec with mutation instructions.
 
@@ -80,11 +81,18 @@ def transform_schema(schema, transform_spec):
 
     print("schema")
     print(schema)
-    print("schema.fields.items()")
-    print(schema.fields.items())
     print("transform_spec.selected_fields")
     print(transform_spec.selected_fields)
+    print("fields")
+    print(fields)
     if transform_spec.selected_fields is not None:
+        # if not name.isidentifier
+        #for index, name in enumerate(field_names):
+        #    if (_iskeyword(name)
+        #            or not name.isidentifier()
+        #            or name.startswith('_')
+        #            or name in seen):
+        #        field_names[index] = "a" + name
         unknown_field_names = set(transform_spec.selected_fields) - set(f.name for f in fields)
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
