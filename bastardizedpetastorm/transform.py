@@ -75,6 +75,12 @@ def transform_schema(schema, transform_spec):
     exclude_fields = {f[0] for f in transform_spec.edit_fields} | removed_fields
     print("schema.fields.items()[0]")
     print(list(schema.fields.items())[0])
+    print(list(schema.fields.items())[0][1])
+    print(list(schema.fields.items())[0][1].name)
+    print(list(schema.fields.items())[0][1].numpy_dtype)
+    print(list(schema.fields.items())[0][1].shape)
+    print(list(schema.fields.items())[0][1].codec)
+    print(list(schema.fields.items())[0][1].nullable)
     fields = [v for k, v in schema.fields.items() if k not in exclude_fields]
 
     for field_to_edit in transform_spec.edit_fields:
