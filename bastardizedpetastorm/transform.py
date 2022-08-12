@@ -92,8 +92,8 @@ def transform_schema(schema, transform_spec):
             if (_iskeyword(name)
                     or not name.isidentifier()
                     or name.startswith('_')):
-                return "a" + name
-            return name
+                return name
+            return "a" + name
         print("checkname(0_fbisc)")
         print(checkname("0_fbisc"))
         unknown_field_names = set(transform_spec.selected_fields) - set(checkname(f.name) for f in fields)
