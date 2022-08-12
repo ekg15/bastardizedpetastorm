@@ -97,11 +97,11 @@ def transform_schema(schema, transform_spec):
         print("checkname(content_hash)")
         print(checkname("content_hash"))
         unknown_field_names = set(transform_spec.selected_fields) - set(checkname(f.name) for f in fields)
-        print(unknown_field_names)
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
                           'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
         fields = [f for f in fields if checkname(f.name) in transform_spec.selected_fields]
+        print(fields)
         fields = sorted(fields, key=lambda f: transform_spec.selected_fields.index(f.name))
 
     print("returning:")
