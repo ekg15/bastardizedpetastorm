@@ -94,7 +94,10 @@ def transform_schema(schema, transform_spec):
                     or name.startswith('_')):
                 return "a" + name
             return name
+        print("checkname(0_fbisc)")
+        print(checkname("0_fbisc"))
         unknown_field_names = set(transform_spec.selected_fields) - set(checkname(f.name) for f in fields)
+        print(unknown_field_names)
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
                           'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
