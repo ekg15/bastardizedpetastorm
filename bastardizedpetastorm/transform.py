@@ -85,6 +85,7 @@ def transform_schema(schema, transform_spec):
     print(transform_spec.selected_fields)
     print("fields")
     print(fields)
+    print(transform_spec.selected_fields is not None)
     if transform_spec.selected_fields is not None:
         # if not name.isidentifier
         fields2 = fields[:]
