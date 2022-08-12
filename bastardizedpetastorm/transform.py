@@ -73,6 +73,8 @@ def transform_schema(schema, transform_spec):
                       'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
 
     exclude_fields = {f[0] for f in transform_spec.edit_fields} | removed_fields
+    print("schema.fields.items()[0]")
+    print(schema.fields.items()[0])
     fields = [v for k, v in schema.fields.items() if k not in exclude_fields]
 
     for field_to_edit in transform_spec.edit_fields:
@@ -104,6 +106,4 @@ def transform_schema(schema, transform_spec):
         print(fields)
         fields = sorted(fields, key=lambda f: transform_spec.selected_fields.index(f.name))
 
-    print("returning:")
-    print("fields:")
     return Unischema(schema._name + '_transformed', fields)
