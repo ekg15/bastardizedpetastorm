@@ -78,6 +78,12 @@ def transform_schema(schema, transform_spec):
                                                 shape=field_to_edit[2], codec=None, nullable=field_to_edit[3])
         fields.append(edited_unischema_field)
 
+    print("schema")
+    print(schema)
+    print("schema.fields.items()")
+    print(schema.fields.items())
+    print("transform_spec.selected_fields")
+    print(transform_spec.selected_fields)
     if transform_spec.selected_fields is not None:
         unknown_field_names = set(transform_spec.selected_fields) - set(f.name for f in fields)
         if unknown_field_names:
