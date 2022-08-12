@@ -101,7 +101,7 @@ def transform_schema(schema, transform_spec):
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
                           'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
-        fields = [f for f in fields if f.name in transform_spec.selected_fields]
+        fields = [f for f in fields if checkname(f.name) in transform_spec.selected_fields]
         fields = sorted(fields, key=lambda f: transform_spec.selected_fields.index(f.name))
 
     return Unischema(schema._name + '_transformed', fields)
