@@ -14,6 +14,7 @@
 import warnings
 
 from bastardizedpetastorm.unischema import UnischemaField, Unischema
+from keyword import iskeyword as _iskeyword
 
 
 def edit_field(name, numpy_dtype, shape, nullable=False):
