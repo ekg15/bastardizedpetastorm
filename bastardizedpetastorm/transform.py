@@ -87,12 +87,14 @@ def transform_schema(schema, transform_spec):
     print(fields)
     if transform_spec.selected_fields is not None:
         # if not name.isidentifier
-        #for index, name in enumerate(field_names):
-        #    if (_iskeyword(name)
-        #            or not name.isidentifier()
-        #            or name.startswith('_')
-        #            or name in seen):
-        #        field_names[index] = "a" + name
+        fields2 = fields[:]
+        for index, name in enumerate(fields2):
+            if (_iskeyword(name)
+                    or not name.isidentifier()
+                    or name.startswith('_')
+                    or name in seen):
+                fields2[index] = "a" + name
+        print(fields2)
         unknown_field_names = set(transform_spec.selected_fields) - set(f.name for f in fields)
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
