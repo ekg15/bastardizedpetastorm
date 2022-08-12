@@ -73,8 +73,8 @@ def transform_schema(schema, transform_spec):
                       'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
 
     exclude_fields = {f[0] for f in transform_spec.edit_fields} | removed_fields
-    print("schema.fields.items()")
-    print(schema.fields.items())
+    print("schema.fields.items()[0]")
+    print(list(schema.fields.items())[0])
     fields = [v for k, v in schema.fields.items() if k not in exclude_fields]
 
     for field_to_edit in transform_spec.edit_fields:
@@ -84,8 +84,8 @@ def transform_schema(schema, transform_spec):
 
     print("transform_spec.selected_fields")
     print(transform_spec.selected_fields)
-    print("fields")
-    print(fields)
+    #print("fields")
+    #print(fields)
     print(transform_spec.selected_fields is not None)
     if transform_spec.selected_fields is not None:
         # if not name.isidentifier
@@ -103,7 +103,7 @@ def transform_schema(schema, transform_spec):
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
                           'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
         fields = [f for f in fields if checkname(f.name) in transform_spec.selected_fields]
-        print(fields)
+        #print(fields)
         fields = sorted(fields, key=lambda f: transform_spec.selected_fields.index(f.name))
 
     return Unischema(schema._name + '_transformed', fields)
