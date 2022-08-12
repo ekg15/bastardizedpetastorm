@@ -73,14 +73,11 @@ def transform_schema(schema, transform_spec):
                       'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
 
     exclude_fields = {f[0] for f in transform_spec.edit_fields} | removed_fields
-    print("schema.fields.items()[0]")
-    print(list(schema.fields.items())[0])
-    print(list(schema.fields.items())[0][1])
-    print(list(schema.fields.items())[0][1].name)
-    print(list(schema.fields.items())[0][1].numpy_dtype)
-    print(list(schema.fields.items())[0][1].shape)
-    print(list(schema.fields.items())[0][1].codec)
-    print(list(schema.fields.items())[0][1].nullable)
+    #print(list(schema.fields.items())[0][1].name)
+    #print(list(schema.fields.items())[0][1].numpy_dtype)
+    #print(list(schema.fields.items())[0][1].shape)
+    #print(list(schema.fields.items())[0][1].codec)
+    #print(list(schema.fields.items())[0][1].nullable)
     fields = [v for k, v in schema.fields.items() if k not in exclude_fields]
 
     for field_to_edit in transform_spec.edit_fields:
@@ -88,11 +85,10 @@ def transform_schema(schema, transform_spec):
                                                 shape=field_to_edit[2], codec=None, nullable=field_to_edit[3])
         fields.append(edited_unischema_field)
 
-    print("transform_spec.selected_fields")
-    print(transform_spec.selected_fields)
+    #print("transform_spec.selected_fields")
+    #print(transform_spec.selected_fields)
     #print("fields")
     #print(fields)
-    print(transform_spec.selected_fields is not None)
     if transform_spec.selected_fields is not None:
         # if not name.isidentifier
         #fields2 = fields[:]
@@ -100,10 +96,10 @@ def transform_schema(schema, transform_spec):
             if (_iskeyword(name) or not name.isidentifier() or name.startswith('_')):
                 return "a" + name
             return name
-        print("checkname(0_fbisc)")
-        print(checkname("0_fbisc"))
-        print("checkname(content_hash)")
-        print(checkname("content_hash"))
+        #print("checkname(0_fbisc)")
+        #print(checkname("0_fbisc"))
+        #print("checkname(content_hash)")
+        #print(checkname("content_hash"))
         unknown_field_names = set(transform_spec.selected_fields) - set(checkname(f.name) for f in fields)
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
