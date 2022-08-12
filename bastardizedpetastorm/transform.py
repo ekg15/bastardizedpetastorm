@@ -79,8 +79,6 @@ def transform_schema(schema, transform_spec):
                                                 shape=field_to_edit[2], codec=None, nullable=field_to_edit[3])
         fields.append(edited_unischema_field)
 
-    print("schema")
-    print(schema)
     print("transform_spec.selected_fields")
     print(transform_spec.selected_fields)
     print("fields")
@@ -88,15 +86,15 @@ def transform_schema(schema, transform_spec):
     print(transform_spec.selected_fields is not None)
     if transform_spec.selected_fields is not None:
         # if not name.isidentifier
-        fields2 = fields[:]
-        for index, name in enumerate(fields2):
+        #fields2 = fields[:]
+        def checkname(name):
             if (_iskeyword(name)
                     or not name.isidentifier()
                     or name.startswith('_')
                     or name in seen):
-                fields2[index] = "a" + name
-        print(fields2)
-        unknown_field_names = set(transform_spec.selected_fields) - set(f.name for f in fields)
+                return "a" + name
+            return name
+        unknown_field_names = set(transform_spec.selected_fields) - set(checkname(f.name) for f in fields)
         if unknown_field_names:
             warnings.warn('selected_fields specified some field names that are not part of the schema. '
                           'These field names will be ignored "{}". '.format(', '.join(unknown_field_names)))
